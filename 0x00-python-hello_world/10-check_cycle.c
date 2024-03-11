@@ -3,7 +3,7 @@
 /**
  * check_cycle - Function to check if cycle exists in a list
  * @list: pointer to head of linked_list
- * Return: 0 if cycle exists, 1 if it doesn't
+ * Return: 1 if cycle exists, 0 if it doesn't
  **/
 
 int check_cycle(listint_t *list)
