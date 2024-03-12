@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-def islower(c):
-    for i in range(ord('A'), ord('Z') + 1):
-        if chr(i) == c:
-            return (True)
-            break
+def uppercase(str):
+    for length in range(len(str)):
+        if str[i] in range(ord('a'), ord('z')):
+            print("{}".format(chr(i -(a - A))), end="")
         else:
-            if chr(i) == 'Z':
-                return (False)
-                break
+            print("{}".format(chr(i)), end="")
