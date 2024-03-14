@@ -4,9 +4,9 @@
 # addition of arguments passed to imported function
 # Would not execute if __import__ is used
 
-if __name__ == "__main__":
-    from add_0 import add
 
-    a = 1
-    b = 2
-    print("{} + {} = {}".format(a, b, add(a, b)))
+a = 1
+b = 2
+
+from add_0 import add
+print("{} + {} = {}".format(a, b, add(a, b)))

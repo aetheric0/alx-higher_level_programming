@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-__import__("5-variable_load")
+__import__("add_0")
