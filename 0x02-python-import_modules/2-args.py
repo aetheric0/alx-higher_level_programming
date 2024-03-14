@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-# Program that prints its number of arguments as well as
-# the arguments
-
 if __name__ == "__main__":
     from sys import argv
     for i in range(len(argv)):
