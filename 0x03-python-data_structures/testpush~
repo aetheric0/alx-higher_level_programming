@@ -1,0 +1,45 @@
+#!/bin/bash#
+# Check if no arguments are passed
+if [ $# -eq 0 ];
+then
+        echo "Proceed to add all files in current directory to staging index [y/n]"
+        echo "===================================================================="
+        read ans
+
+        if [ "$ans" = "y" ];
+        then
+                git add .
+        else
+                exit
+        fi
+fi
+
+# If arguments are passed, run git add on each argument
+for var in $@
+do
+        git add "$var"
+done
+
+# Write commit message
+echo ""
+echo "Enter commit message"
+echo "===================="
+echo "Tip: commit messages should give a brief idea into the changes made"
+
+read commit_msg
+
+# Confirm user wants to commit in case of wrong commit message
+echo ""
+echo "Proceed to commit [y/n]"
+echo "======================="
+read ans
+
+if [ "$ans" = "y" ];
+then
+        git commit -m "$commit_msg"
+else
+        exit
+fi
+
+# Push
+git push
