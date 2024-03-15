@@ -11,10 +11,10 @@ if __name__ == "__main__":
     b = argv[3]
     a, b = int(a), int(b)
     if argv[2] == "+":
-        print("a + b = {}".format(a+b))
+        print("a + b = {}".format(a + b))
     elif argv[2] == "-":
-        print("a - b = {}".format(a-b))
+        print("a - b = {}".format(a - b))
     elif argv[2] == "*":
-        print("a * b = {}".format(a*b))
+        print("a * b = {}".format(a * b))
     elif argv[2] == "/":
-        print("a / b = {}".format(a/b))
+        print("a / b = {}".format(a / b))
