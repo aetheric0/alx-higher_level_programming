@@ -47,6 +47,7 @@ int is_palindrome(listint_t **head)
  * @current_node: Tointer to head of list
  * @prev_node: To hold address of previous node while reversing
  * @next_node: To hold address of next node while reversing
+ * @counter: Iterator for half-list
  **/
 
 void reverse_list(listint_t *current_node, listint_t *prev_node,
