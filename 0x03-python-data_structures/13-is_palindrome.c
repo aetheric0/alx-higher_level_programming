@@ -3,7 +3,7 @@
 /**
  * is_palindrome -  Determines if a linked list is a palindrome
  * @head: Pointer to linked list
- * Return: 0 if palindrome, 1 if not
+ * Return: 1 if palindrome, 0 if not
  **/
 
 int is_palindrome(listint_t **head)
@@ -20,26 +20,22 @@ int is_palindrome(listint_t **head)
 		counter++;
 	}
 	if (counter % 2 != 0)
-		return (1);
+		return (0);
 
 	temp = *head;
-	counter = (counter / 2);
+	counter = (counter / 2) + 1;
 	for (i = 0; i <= counter; i++)
 		temp = temp->next;
-
-	/* Reversing first-half of the list for comparison */
 	reverse_list(current_node, prev_node, next_node, counter);
-
-	/* Checks if list is not a Palindrome */
 	while (current_node != NULL)
 	{
 		if (current_node->n != temp->n)
-			return (1);
+			return (0);
 		current_node = current_node->next;
 		temp = temp->next;
 	}
 
-	return (0);
+	return (1);
 }
 
 /**
