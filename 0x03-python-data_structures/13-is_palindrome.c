@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 		return (0);
 
 	temp = *head;
-	counter = (counter / 2) + 1;
+	counter = (counter / 2);
 	for (i = 0; i <= counter; i++)
 		temp = temp->next;
 	reverse_list(current_node, prev_node, next_node, counter);
