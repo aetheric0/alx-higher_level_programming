@@ -38,6 +38,7 @@ class Node:
         else:
             raise TypeError("next_node must be a Node object")
 
+
 class SinglyLinkedList:
     """" Class to define a linked list and insert a Node"""
     def __init__(self):
