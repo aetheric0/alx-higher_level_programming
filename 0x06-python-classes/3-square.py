@@ -4,6 +4,7 @@
 
 
 class Square:
+    """ private instance attribute with validation"""
     def __init__(self, size=0):
         if isinstance(size, int):
             if size >= 0:
@@ -12,3 +13,7 @@ class Square:
                 raise ValueError("size must be >= 0")
         else:
             raise TypeError("size must be an integer")
+
+    def area(self):
+        self.__size *= self.__size
+        return self.__size
