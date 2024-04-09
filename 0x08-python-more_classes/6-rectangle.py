@@ -15,6 +15,7 @@ class Rectangle:
     number_of_instances: tracks the number of times an instance is created
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initializing the class rectangle
