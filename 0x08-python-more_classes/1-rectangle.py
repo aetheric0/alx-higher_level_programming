@@ -27,7 +27,9 @@ class Rectangle:
 
     @property
     def width(self):
-        """ Retrieving/Modifying the private instance variable width"""
+        """
+        Retrieving/Modifying the private instance variable width
+        """
         return self.__width
 
     @width.setter
@@ -41,8 +43,10 @@ class Rectangle:
             raise TypeError("width must be an integer")
 
     @property
-    """ Retrieving/Modifying the private instance variable height"""
     def height(self):
+        """
+        Retrieving/Modifying the private instance variable height
+        """
         return self.__height
 
     @height.setter
