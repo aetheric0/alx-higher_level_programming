@@ -22,14 +22,12 @@ class Rectangle:
         width: the width of the rectangle
         height: the height of the rectangle
         """
-
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
         """ Retrieving/Modifying the private instance variable width"""
-
         return self.__width
 
     @width.setter
@@ -44,7 +42,6 @@ class Rectangle:
 
     @property
     """ Retrieving/Modifying the private instance variable height"""
-
     def height(self):
         return self.__height
 
