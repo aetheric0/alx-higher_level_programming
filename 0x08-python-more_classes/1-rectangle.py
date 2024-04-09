@@ -14,11 +14,22 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
+        """
+        Initializing the class rectangle
+
+        Args:
+        -----
+        width: the width of the rectangle
+        height: the height of the rectangle
+        """
+
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
+        """ Retrieving/Modifying the private instance variable width"""
+
         return self.__width
 
     @width.setter
@@ -32,6 +43,8 @@ class Rectangle:
             raise TypeError("width must be an integer")
 
     @property
+    """ Retrieving/Modifying the private instance variable height"""
+
     def height(self):
         return self.__height
 
