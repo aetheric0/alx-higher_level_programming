@@ -1,0 +1,11 @@
+The ``2-matrix_divided`` module
+===============================
+
+Usage:
+
+From the module importing ``matrix_divided``:
+    >>> __import__('2-matrix_divided').matrix_divided
+
+Dividing a 3x2 by a positive integer 5:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 5)
+    [[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
