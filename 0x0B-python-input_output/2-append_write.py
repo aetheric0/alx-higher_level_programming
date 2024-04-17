@@ -5,7 +5,7 @@ Contains write_file function that appends text to a file
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     Function that appends to filename
     Returns the numbers of characters written
