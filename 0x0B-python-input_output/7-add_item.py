@@ -19,8 +19,16 @@ def add_argument():
 
     filename = 'add_item.json'
     arg_list = []
+
+    with open(filename, encoding='utf-8') as my_file:
+        file_content = my_file.read()
+        if len(file_content) > 0:
+            json_arg = json.loads(file_content)
+            arg_list += json_arg
+
     for arg in sys.argv[1:]:
         arg_list.append(arg)
+
     save_to_json_file(arg_list, filename)
     json_arg = load_from_json_file(filename)
     return json_arg
