@@ -20,7 +20,8 @@ def add_argument():
     filename = 'add_item.json'
     arg_list = []
 
-    with open(filename, mode='r+', encoding='utf-8') as my_file:
+    with open(filename, mode='a+', encoding='utf-8') as my_file:
+        my_file.seek(0)
         file_content = my_file.read()
         if len(file_content) > 0:
             json_arg = json.loads(file_content)
