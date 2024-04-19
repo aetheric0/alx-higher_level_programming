@@ -7,11 +7,24 @@ Test Case for class `MyList`:
 Test 0: Importing the class:
      >>> MyList = __import__('1-my_list').MyList
 
-Test 1: Creating an instance of the class:
-     >>> my_list = MyList()
+Normal Test Case:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>>
 
 
 Test 2: For when a positive integer is appended:
+     >>> my_list = MyList()
      >>> my_list.append(1)
 
 Test 3: When multiple integers are appended (positive, negative and zero):
