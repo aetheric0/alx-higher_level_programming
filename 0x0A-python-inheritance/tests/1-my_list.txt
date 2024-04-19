@@ -46,7 +46,7 @@ Test 6: For when no value is passed to appended
      >>> my_list.append()
      Traceback (most recent call last):
      ...
-     TypeError: list.append() takes exactly one argument (0 given)
+     TypeError: append() takes exactly one argument (0 given)
 
 Test 7: Testing pop module:
      >>> my_list.pop()
