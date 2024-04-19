@@ -4,11 +4,11 @@ Module to determine if an instance belongs to a class
 """
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """
     checks if obj is an exact type of a_class
     """
-    if isinstance(obj, a_class):
+    if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
     else:
         return False
