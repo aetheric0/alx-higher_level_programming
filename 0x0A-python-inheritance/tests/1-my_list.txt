@@ -1,8 +1,7 @@
-"""
-Test Case for module 1-my_list
+Test Case for module `1-my_list`
 ==============================
 
-Test Case for class MyList:
+Test Case for class `MyList`:
 ---------------------------
 
 Test 0: Importing the class:
@@ -23,12 +22,12 @@ Test 3: When multiple integers are appended (positive, negative and zero):
 Test 4: When a string is appended and print:
      >>> my_list.append("Eric")
      >>> print(my_list)
-     [1, 2, -3, "Eric"]
+     [1, 2, -3, 0, 'Eric']
 
 Test 5: When a list is appended and print:
      >>> my_list.append([2, 3])
      >>> print(my_list)
-     [1, 2, -3, "Eric", [2, 3]]
+     [1, 2, -3, 0, 'Eric', [2, 3]]
 
 Test 6: For when no value is passed to appended
      >>> my_list.append()
@@ -38,26 +37,27 @@ Test 6: For when no value is passed to appended
 
 Test 7: Testing pop module:
      >>> my_list.pop()
+     [2, 3]
      >>> print(my_list)
-     [1, 2, -3, "Eric"]
+     [1, 2, -3, 0, 'Eric']
 
 Test 8: Test for appending other datatypes:
-     >>> my_list.append({'pay_1': 400 })
+     >>> my_list.append({'pay_1': 400})
      >>> my_list.append((2, 3))
      >>> my_list.append(4.56)
      >>> my_list.append(True)
-     print(my_list)
-     [1, 2, -3, "Eric", {'pay_1': 400 }, (2, 3), 4.56, True]
-"""
+     >>> print(my_list)
+     [1, 2, -3, 0, 'Eric', {'pay_1': 400}, (2, 3), 4.56, True]
 
 
-Test Cases for function print_sorted(self):
+
+Test Cases for function `print_sorted(self)`:
 
 Test 1: Test if a list with mixed datatypes passed is sorted:
       >>> my_list.print_sorted()
       Traceback (most recent call last):
       ...
-       TypeError: '<' not supported between instances of 'str' and 'int'
+      TypeError: '<' not supported between instances of 'str' and 'int'
 
 
 Test 2: Test for numeric sorted list:
@@ -67,9 +67,9 @@ Test 2: Test for numeric sorted list:
      >>> my_list.append(2)
      >>> my_list.append(3)
      >>> my_list.append(5)
-     print(my_list)
+     >>> print(my_list)
      [1, 4, 2, 3, 5]
-     my_list.print_sorted()
+     >>> my_list.print_sorted()
      [1, 2, 3, 4, 5]
-     print(my_list)
+     >>> print(my_list)
      [1, 4, 2, 3, 5]
