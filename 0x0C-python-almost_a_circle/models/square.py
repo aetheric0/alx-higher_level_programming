@@ -2,8 +2,6 @@
 """
 The Square Module
 """
-
-
 from models.rectangle import Rectangle
 
 
@@ -18,6 +16,26 @@ class Square(Rectangle):
     def __str__(self):
         return '[Square] ({}) {}/{} - {}]'.format(self.id, self.x,
                                                   self.y, self.width)
+
+    def update(self, *args, **kwargs):
+        if args:
+            i = 0
+            self.id = args[i]
+            i += 1
+            if i < len(args):
+                self.__width = args[i]
+            i += 1
+            if i < len(args):
+                self.__height = args[i]
+            i += 1
+            if i < len(args):
+                self.__x = args[i]
+            i += 1
+            if i < len(args):
+                self.__y = args[i]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     @property
     def size(self):
