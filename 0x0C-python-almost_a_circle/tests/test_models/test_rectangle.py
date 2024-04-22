@@ -23,6 +23,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle_2.id, 2)
 
     def test_all_values(self):
+        """
+        Test for when all arguments are given
+        """
+
         rectangle_3 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(rectangle_3.id, 12)
 
@@ -61,6 +65,11 @@ class TestRectangle(unittest.TestCase):
             Rectangle(3, 2, 6, -4)
 
     def test_area(self):
+        """
+        Tests the area function that calculates the area using the width
+        and height private instance variables
+        """
+
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.area(), 6)
 
@@ -71,6 +80,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r3.area(), 56)
 
     def test_display(self):
+        """
+        Tests the display function
+        """
+
         captured_output = StringIO()
         sys.stdout = captured_output
         r1 = Rectangle(4, 6)
