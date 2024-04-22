@@ -60,7 +60,7 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
-        filename = str(cls.__name) + '.json'
+        filename = str(cls.__name__) + '.json'
         try:
             with open(filename, mode='r', encoding='utf-8') as file2:
                 data = json.load(file2)
