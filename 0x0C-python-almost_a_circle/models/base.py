@@ -25,7 +25,7 @@ class Base():
         """
         Returns the JSON representation of the dictionary passed
         """
-        if list_dictionaries is None or list_dictionaries[0] is None:
+        if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
