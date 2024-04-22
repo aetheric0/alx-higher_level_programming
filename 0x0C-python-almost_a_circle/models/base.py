@@ -36,7 +36,7 @@ class Base():
         """
         Loads JSON string representation
         """
-        if json_string is None or "":
+        if json_string is None or json_string == "":
             return "[]"
         else:
             return json.loads(json_string)
