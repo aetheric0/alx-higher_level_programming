@@ -28,7 +28,6 @@ class TestRectangle(unittest.TestCase):
         """
         Test for when all arguments are given
         """
-
         rectangle_3 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(rectangle_3.id, 12)
 
