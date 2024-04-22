@@ -9,7 +9,6 @@ from io import StringIO
 from models.rectangle import Rectangle
 
 
-
 class TestRectangle(unittest.TestCase):
     """
     Test cases for the rectangle module
