@@ -54,8 +54,8 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        r1 = cls(2, 3, 1, 7)
-        r1.update(dictionary)
+        r1 = cls(4, 3)
+        r1.update(**dictionary)
         return r1
 
     @classmethod
