@@ -17,6 +17,10 @@ class TestRectangle(unittest.TestCase):
     """
 
     def test_width_and_height_only(self):
+        """
+        Tests for the width and height values
+        """
+
         rectangle_1 = Rectangle(10, 2)
         self.assertEqual(rectangle_1.id, 1)
         rectangle_2 = Rectangle(2, 10)
