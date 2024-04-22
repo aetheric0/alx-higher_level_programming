@@ -5,9 +5,7 @@ unit test module for `base` module in models directory
 
 
 import unittest
-from models import base
-
-Base = base.Base
+from models.base import Base
 
 
 class TestBase(unittest.TestCase):

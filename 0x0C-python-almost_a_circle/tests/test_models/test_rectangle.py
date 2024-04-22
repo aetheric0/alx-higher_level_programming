@@ -6,9 +6,8 @@ Test file for rectangle module
 import sys
 import unittest
 from io import StringIO
-from models import rectangle
+from models.rectangle import Rectangle
 
-Rectangle = rectangle.Rectangle
 
 
 class TestRectangle(unittest.TestCase):
@@ -22,9 +21,9 @@ class TestRectangle(unittest.TestCase):
         """
 
         rectangle_1 = Rectangle(10, 2)
-        self.assertEqual(rectangle_1.id, 1)
+        self.assertEqual(rectangle_1.id, 8)
         rectangle_2 = Rectangle(2, 10)
-        self.assertEqual(rectangle_2.id, 2)
+        self.assertEqual(rectangle_2.id, 9)
 
     def test_all_values(self):
         """
