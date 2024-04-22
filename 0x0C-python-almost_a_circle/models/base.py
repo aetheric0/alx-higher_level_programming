@@ -2,6 +2,7 @@
 """
 Module containing the first class
 """
+import json
 
 
 class Base():
@@ -19,3 +20,12 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """
+        Returns the JSON representation of the dictionary passed
+        """
+        if list_dictionaries is None:
+            return '[]'
+        dict_1 = list_dictionaries
+        return json.dumps(dict_1)
