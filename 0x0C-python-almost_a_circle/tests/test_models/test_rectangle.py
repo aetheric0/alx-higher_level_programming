@@ -3,13 +3,13 @@
 Test file for rectangle module
 """
 
-
 import sys
 import unittest
 from io import StringIO
 from models import rectangle
 
 Rectangle = rectangle.Rectangle
+
 
 class TestRectangle(unittest.TestCase):
     """
