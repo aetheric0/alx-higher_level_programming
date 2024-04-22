@@ -55,5 +55,16 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         r1 = cls(2, 3, 1, 7)
-        r1.update(**dictionary)
+        r1.update(dictionary)
         return r1
+
+    @classmethod
+    def load_from_file(cls):
+        filename = str(cls.__name) + '.json'
+        try:
+            with open(filename, mode='r', encoding='utf-8') as file2:
+                data = json.load(file2)
+                instances = [cls.create(**item) for item in data]
+                return instances
+        except FileNotFoundError:
+            return []
