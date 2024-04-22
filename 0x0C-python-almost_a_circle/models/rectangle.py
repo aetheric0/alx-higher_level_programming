@@ -2,9 +2,8 @@
 """
 Module that inherits from Base
 """
-
-
 from models.base import Base
+
 
 class Rectangle(Base):
     """
@@ -70,10 +69,13 @@ class Rectangle(Base):
                 if self.__x > 0 and breadth == 0:
                     for j in range(self.__x):
                         print(' ', end="")
-                print('#', end ="")
+                print('#', end="")
             print()
 
     def update(self, *args, **kwargs):
+        """
+        updates instance variables using args and kwargs
+        """
         if args:
             i = 0
             self.id = args[i]
@@ -107,7 +109,6 @@ class Rectangle(Base):
         else:
             raise TypeError('width must be an integer')
 
-
     @property
     def height(self):
         return self.__height
@@ -135,8 +136,6 @@ class Rectangle(Base):
                 raise ValueError('x must be >= 0')
         else:
             raise TypeError('x must be an integer')
-
-
 
     @property
     def y(self):
