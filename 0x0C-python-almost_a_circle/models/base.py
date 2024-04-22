@@ -43,6 +43,9 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        save JSON representation to a file
+        """
         filename = cls.__name__ + '.json'
         with open(filename, mode='w', encoding='utf-8') as file1:
             if list_objs is None:
@@ -54,12 +57,18 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        Creates an instance and updates
+        """
         r1 = cls(4, 3)
         r1.update(**dictionary)
         return r1
 
     @classmethod
     def load_from_file(cls):
+        """
+        Loads from json file an instance
+        """
         filename = str(cls.__name__) + '.json'
         try:
             with open(filename, mode='r', encoding='utf-8') as file2:
