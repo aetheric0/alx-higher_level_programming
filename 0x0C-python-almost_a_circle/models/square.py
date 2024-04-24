@@ -11,9 +11,15 @@ class Square(Rectangle):
     """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Initializes the object
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """
+        Sets the str method when str() is called
+        """
         return '[Square] ({}) {}/{} - {}]'.format(self.id, self.x,
                                                   self.y, self.width)
 
@@ -53,10 +59,16 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """
+        getter property for size
+        """
         return self.width
 
     @size.setter
     def size(self, value):
+        """
+        sets the value for size
+        """
         if type(value) is int:
             if value > 0:
                 self.width = value
