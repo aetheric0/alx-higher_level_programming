@@ -72,8 +72,8 @@ class Base():
         filename = str(cls.__name__) + '.json'
         try:
             with open(filename, mode='r', encoding='utf-8') as file2:
-                data = json.load(file2)
+                data = Base.from_json_string(file2.read())
                 instances = [cls.create(**item) for item in data]
-                return instances
+            return instances
         except FileNotFoundError:
             return []
