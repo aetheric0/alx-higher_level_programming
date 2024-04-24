@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+"""
+A module that creates the base class with private
+class attribute __nb_objects = 0
+"""
+
+
+class Base():
+    """
+    Class that creates the private instance attribute
+    __nb_objects
+    """
+    __nb_objects = 0
+
+    def __init__(self, cls, id=None):
+        """
+        Initializes and assigns value to id
+        """
+        if id is not None:
+            self.id = id
+        else:
+            cls.__nb_objects += 1
+            self.id = cls.__nb_objects

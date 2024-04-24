@@ -2,8 +2,6 @@
 """
 unit test module for `base` module in models directory
 """
-
-
 import unittest
 from models.base import Base
 

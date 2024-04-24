@@ -18,6 +18,9 @@ class Square(Rectangle):
                                                   self.y, self.width)
 
     def update(self, *args, **kwargs):
+        """
+        Updates the values using args and kwargs
+        """
         if args:
             i = 0
             self.id = args[i]
