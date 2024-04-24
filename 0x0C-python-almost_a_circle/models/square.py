@@ -20,7 +20,7 @@ class Square(Rectangle):
         """
         Sets the str method when str() is called
         """
-        return '[Square] ({}) {}/{} - {}]'.format(self.id, self.x,
+        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x,
                                                   self.y, self.width)
 
     def update(self, *args, **kwargs):
