@@ -32,13 +32,13 @@ class Square(Rectangle):
             self.id = args[i]
             i += 1
             if i < len(args):
-                self.__size = args[i]
+                self.size = args[i]
             i += 1
             if i < len(args):
-                self.__x = args[i]
+                self.x = args[i]
             i += 1
             if i < len(args):
-                self.__y = args[i]
+                self.y = args[i]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
