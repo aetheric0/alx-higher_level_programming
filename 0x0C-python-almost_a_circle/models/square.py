@@ -32,10 +32,7 @@ class Square(Rectangle):
             self.id = args[i]
             i += 1
             if i < len(args):
-                self.__width = args[i]
-            i += 1
-            if i < len(args):
-                self.__height = args[i]
+                self.__size = args[i]
             i += 1
             if i < len(args):
                 self.__x = args[i]
