@@ -5,6 +5,9 @@ import MySQLdb
 if __name__ == '__main__':
     db = MySQLdb.connect('localhost', argv[1], argv[2], argv[3])
     c = db.cursor()
-    c.execute('SELECT * FROM states WHERE name LIKE "N%"')
+    c.execute('SELECT * from states WHERE name = %s', (argv[4],))
     for row in c.fetchall():
         print(row)
+
+    c.close()
+    db.close()
