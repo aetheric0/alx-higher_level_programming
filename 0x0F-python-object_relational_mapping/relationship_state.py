@@ -16,4 +16,4 @@ class State(Base):
     id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
     cities = relationship('City', order_by='City.id',
-                                back_populates='state')
+                          back_populates='state')
