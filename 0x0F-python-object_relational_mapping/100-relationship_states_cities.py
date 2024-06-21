@@ -17,9 +17,6 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    State.cities = relationship('City', order_by=City.id,
-                                back_populates='city')
-    state = State(name='California')
-    state.cities = [City(name='San Francisco')]
+    state = State(name='California', cities='San Francisco')
     session.add(state)
     session.commit()
