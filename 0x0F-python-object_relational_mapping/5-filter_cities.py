@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Prints the cities associated with a state given as an argument
+"""
 from sys import argv
 import MySQLdb
 

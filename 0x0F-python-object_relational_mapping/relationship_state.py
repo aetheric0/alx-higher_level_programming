@@ -2,9 +2,9 @@
 """
 Defines the State Model and imports and sets the Base Model
 """
-from sys import argv
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 

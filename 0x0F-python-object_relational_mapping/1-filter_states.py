@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Prints only states that begin with N in the states table
+"""
 from sys import argv
 import MySQLdb
 

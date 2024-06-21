@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Prints states in Ascending order from state table using MySQLdb API
+"""
 from sys import argv
 import MySQLdb
 

@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Prints the state row that matches the state passed as an argument
+"""
 from sys import argv
 import MySQLdb
 
