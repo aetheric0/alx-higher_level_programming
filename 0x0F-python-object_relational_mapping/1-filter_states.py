@@ -6,7 +6,7 @@ import MySQLdb
 
 if __name__ == '__main__':
     engine = MySQLdb.connect(host='localhost' port='3306',
-                         user=argv[1], password=argv[2], db=argv[3])
+                             user=argv[1], password=argv[2], db=argv[3])
     c = engine.cursor()
     c.execute('SELECT * FROM states WHERE name LIKE "N%" ORDER BY ASC')
     for row in c.fetchall():
