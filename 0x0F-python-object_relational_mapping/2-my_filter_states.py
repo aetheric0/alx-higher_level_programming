@@ -11,6 +11,5 @@ if __name__ == '__main__':
     c.execute('SELECT * from states WHERE name = %s', (argv[4],))
     for row in c.fetchall():
         print(row)
-
     c.close()
     db.close()
