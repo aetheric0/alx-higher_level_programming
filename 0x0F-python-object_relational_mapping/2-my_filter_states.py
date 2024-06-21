@@ -9,7 +9,8 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost', port=3306,
                          user=argv[1], password=argv[2], db=argv[3])
     c = db.cursor()
-    c.execute('SELECT * from states WHERE name = %s', (argv[4],))
+    query = 'SELECT * from states WHERE name = %s'.format()
+    c.execute(query, (argv[4],))
     for row in c.fetchall():
         print(row)
     c.close()
