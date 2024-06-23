@@ -23,6 +23,6 @@ if __name__ == '__main__':
     ).order_by(State.id)
     session.commit()
     for row in state_and_city:
-        print('{}: {}'.format(row.id, row.cities[0].state.name))
+        print('{}: {}'.format(row.cities[0].state.id, row.cities[0].state.name))
         for city in row.cities:
             print('\t{}: {}'.format(city.id, city.name))
