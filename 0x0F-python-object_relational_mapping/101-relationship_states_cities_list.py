@@ -16,12 +16,13 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state_and_city = session.query(State).order_by(State.id)
+    state_and_city = session.query(
+        State
+    ).filter(
+        State.id == City.state_id
+    ).order_by(State.id)
     session.commit()
     for row in state_and_city:
         print('{}: {}'.format(row.id, row.cities[0].state.name))
-        i = 0
-        for city in session.query(City).filter(City.state_id == row.id):
-            print('\t{}: {}'.format(city.state.cities[i].id,
-                                    city.state.cities[i].name))
-            i += 1
+        for city in row.cities:
+            print('\t{}: {}'.format(city.id, city.name))
