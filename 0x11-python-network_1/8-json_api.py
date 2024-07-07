@@ -7,9 +7,9 @@ if __name__ == '__main__':
     import requests
     url = 'http://0.0.0.0:5000/search_user'
     if len(argv) == 2:
-        req = requests.post(url, data ={'q': argv[1]})
+        req = requests.post(url, data={'q': argv[1]})
     else:
-        req = requests.post(url, data ={'q': ""})
+        req = requests.post(url, data={'q': ""})
     try:
         a = req.json()
         if a:
