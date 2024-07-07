@@ -6,5 +6,5 @@ if __name__ == '__main__':
     from sys import argv
     url = argv[1]
     with request.urlopen(url) as response:
-        body = response.info()
-        print(body['X-Request-Id'])
+        header = response.info()
+        print(header['X-Request-Id'])
