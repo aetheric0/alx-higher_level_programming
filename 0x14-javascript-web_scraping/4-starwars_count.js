@@ -16,9 +16,8 @@ request(url, function (error, response, body) {
             console.error(error);
           }
           const characterData = JSON.parse(body);
-          characterFilms = characterData.films
-          console.log(characterFilms.length)
-          return;
+          characterFilms = characterData.films;
+          console.log(characterFilms.length);
         });
         foundCharacter = true;
         break;
